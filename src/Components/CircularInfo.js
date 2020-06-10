@@ -19,20 +19,22 @@ const CircularInfo = ({ cpuLoad, temperature, memoryUsage }) => {
         />
         <h5 className="text-center mt-1">CPU</h5>
       </div>
-      <div className="col-4 col-lg-2 offset-md-2">
-        <CircularProgressbar
-          value={temperature}
-          minValue={0}
-          maxValue={120}
-          text={`${temperature}° C`}
-          styles={buildStyles({
-            pathColor: "#593196",
-            textColor: "#593196",
-            trailColor: "#d6d6d6",
-          })}
-        />
-        <h5 className="text-center mt-1">CPU Temp</h5>
-      </div>
+      {temperature > 0 && (
+        <div className="col-4 col-lg-2 offset-md-2">
+          <CircularProgressbar
+            value={temperature}
+            minValue={0}
+            maxValue={120}
+            text={`${temperature}° C`}
+            styles={buildStyles({
+              pathColor: "#593196",
+              textColor: "#593196",
+              trailColor: "#d6d6d6",
+            })}
+          />
+          <h5 className="text-center mt-1">CPU Temp</h5>
+        </div>
+      )}
       <div className="col-4 col-lg-2  offset-lg-2">
         <CircularProgressbar
           value={memoryUsage}

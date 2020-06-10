@@ -36,6 +36,7 @@ const SideScreen = ({
                   <a
                     href="https://sourceforge.net/projects/realtimesystemmonitor/files"
                     className="btn btn-success"
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     Download Desktop App

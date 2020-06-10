@@ -8,7 +8,11 @@ const MachineData = (props) => {
       <DashboardCard
         title={props.manufacturer}
         subTitle={props.model}
-        content={`${props.platform} ${props.distro} ${props.release}`}
+        content={`${props.platform} ${props.distro} ${props.release} ${
+          props.batteryPercentage
+            ? "Battery " + props.batteryPercentage + "%"
+            : ""
+        }`}
         width={3}
       />
       <DashboardCard
@@ -45,6 +49,7 @@ const mapStateToProps = (state) => {
     arch,
     deviceName,
     graphics,
+    batteryPercentage,
   } = state.monitorData;
   return {
     manufacturer,
@@ -62,6 +67,7 @@ const mapStateToProps = (state) => {
     arch,
     deviceName,
     graphics,
+    batteryPercentage,
   };
 };
 export default connect(mapStateToProps)(MachineData);
