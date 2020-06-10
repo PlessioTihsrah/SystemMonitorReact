@@ -1,0 +1,8 @@
+{
+  "short_name": "System Monitor",
+  "name": "System Monitor",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#593196",
+  "background_color": "#ffffff"
+}
