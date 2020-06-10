@@ -30,9 +30,16 @@ const SideScreen = ({
               <div className="card-body ">
                 <div className="card-title text-center">
                   <h5>Email: {user.email}</h5>
-                  <button className="btn btn-danger" onClick={logout}>
+                  <button className="btn btn-danger mr-2" onClick={logout}>
                     Logout
                   </button>
+                  <a
+                    href="https://sourceforge.net/projects/realtimesystemmonitor/files"
+                    className="btn btn-success"
+                    target="_blank"
+                  >
+                    Download Desktop App
+                  </a>
                 </div>
                 <ChangePassword />
                 <hr />
